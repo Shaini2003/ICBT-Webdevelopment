@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    body{
+        border: 1px solid black;
+        
+
+        text-align: justify;
+    }
+</style>
+<body><form action="" name="myForm">
+    Customer Name: <input type="text" id="name"><br><br>
+    Password: <input type="password" id="password"><br><br>
+    Purchase Order Number: <input type="number"><br><br>
+    Delivery Method:<input type="radio">Ordinary Post <input type="radio">Registered Post<br><br>
+    Payment Method:<select>
+     <option>--select--</option>
+     <option>--select--</option>
+     <option>--select--</option>
+     <option>--select--</option>
+ 
+    </select><br><br>
+    Terms and Conditions:<input type="radio"><br><br>
+    <button onclick="validateForm()">Submit</button><br><br>
+</form>
+<script>
+    function validateForm(){
+        let name=document.getElementById("name").value;
+        
+        if(name==" "){
+            alert("Please enter your name.");
+            return false;
+        }
+        
+
+        let password=document.getElementById("password").value;
+        
+        if(password.length>6 || password.length<10){
+            alert("Password length should be in 6-10 characters");
+            return false;
+        }
+        
+    }
+    
+</script>
+   
+    
+</body>
+</html>
